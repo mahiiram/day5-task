@@ -1,0 +1,140 @@
+1.print the arrays of odd numbers using IIFE function
+ (function oddnumber(a){
+ let b = a.toString().split('').map(Number);
+ let arr = [];
+  for(let i=0; i<b.length; i++){
+    if(b[i] %2 != 0){
+     arr.push(b[i])
+   }   
+}  
+console.log(arr); 
+})(123456789)
+2.sum of the array in IIFE
+  (function sumofarray(a){
+  let sum = 0; 
+  for(let i=0; i<a.length; i++){
+     sum += a[i]
+   }
+   console.log(sum);   
+ })([1,2,3,4,5,6,7,8,9]);
+3.Return all the prime numbers in array IIFE function
+let primenumber = (function (a) { 
+       let newarr= [];
+       for(let i=0; i<a.length; i++){
+          if(a[i] % 2 != 0){
+            newarr.push(a[i])  
+          } 
+         
+        } 
+        return newarr
+      })([1,2,3,4,5,6,7,8,9])    
+      console.log(primenumber)
+
+
+4.return all the palindromes in array IIFE
+
+let palindromes = (function (a,b){
+       let N1 = a.toString().split('').reverse().join("");   
+       let N2 = b.toString().split('').reverse().join("");
+        palindrome1 = parseInt(N1);
+        palindrome2 = parseInt(N2);
+        let arr =[];
+          if(a == palindrome1 &&  b == palindrome2 ){
+             arr.push(palindrome1,palindrome2)
+          }
+         return arr
+      })(12321,15451)
+      console.log(palindromes)
+5.return the median of two sorted arrays
+
+let median= (function (a,b){
+       let newarr=a.concat(b);
+       let newarr1 = newarr.sort((a,b)=>a-b)
+       let n = newarr1.length/2;
+       return (newarr1[n]+newarr1[n-1])/2 ;     
+       }) ([1,2,5,6,9],[8,10,13,27,25]) 
+       console.log(median);
+6.remove dublicates from array
+
+let removedublicates = (function (a){
+       let dub = a.filter((c, i) =>a.indexOf(c) === i )
+        return dub
+    
+   })(['mahendran','ramar','gugan','mahendran','manoj'])
+   console.log(removedublicates)
+
+1.print the arrays of odd numbers using arrow function
+const result =() => {
+       let oddnumber = 123456789
+       let b = oddnumber.toString().split('').map(Number);
+       let arr =[];
+        for(let i=0; i<b.length; i++){
+          if(b[i] %2 != 0){
+           arr.push(b[i])
+         }   
+      }      
+      return arr
+};
+console.log(result());
+
+2.sum of the array in arrow function
+const sumofarray=()=>{
+       let a = [1,2,3,4,5,6,7,8,9]
+       let sum = 0; 
+       for(let i=0; i<a.length; i++){
+          sum += a[i]
+        }
+         return sum  
+      }
+      console.log(sumofarray());
+3.Return all the prime numbers in array using ananymous function
+  const primenumber= () => {
+  let arr = [1,2,3,4,5,6,7,8,9];
+  let newarr= [];
+  for(let i=0; i<arr.length; i++){
+     if(arr[i] % 2 != 0){
+       newarr.push(arr[i])  
+     } 
+   }
+   return newarr 
+ }
+ console.log(primenumber())
+
+4.return all the palindromes in array arrow function
+const palindromes = ()=>{
+       let a = 12321;
+       let b = 15451;
+       let N1 = a.toString().split('').reverse().join("");   
+       let N2 = b.toString().split('').reverse().join("");
+        palindrome1 = parseInt(N1);
+        palindrome2 = parseInt(N2);
+        let arr =[];
+          if(a == palindrome1 &&  b == palindrome2 ){
+             arr.push(palindrome1,palindrome2)
+          }
+         return arr
+      }
+      console.log(palindromes());
+
+5.return the median of two sorted arrays
+
+const median= ()=>{
+       let a = [1,2,5,6,9];
+       let b = [8,10,13,27,25];
+       let newarr=a.concat(b);
+       let newarr1 = newarr.sort((a,b)=>a-b)
+       let n = newarr1.length/2;
+       return (newarr1[n]+newarr1[n-1])/2 ;     
+       }
+       console.log(median());
+
+6.remove dublicates from array in arrow function
+
+let removedublicates = () => {
+       let a = ['mahendran','ramar','gugan','mahendran','manoj']
+       let dub = a.filter((c, i) =>a.indexOf(c) === i )
+        return dub
+    
+   }
+   console.log(removedublicates());
+
